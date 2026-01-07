@@ -69,7 +69,18 @@ The turbidity sensor is the only `UART` sensor, it is asynchronous having only T
 | **RX** |  PB15, PB7 |  PA3, PD6 | PB11, PD9, PC11  | PA11, PH14, PC11, PD0, PB8  | PB12(9), PD2, PB5  | PC7, PG9   |  PF6, PE7, PA8, PB3(JTDO/TRACESWO)  | PJ9, PE0 | PA10, PB7 |
 
 
-** Highlighed pins are the default selection in STMCube32IDE**
+**Highlighed pins are the default selection in STMCube32IDE**
+
+I recomend against using the following pins
+
+- PB3(JTDO/TRACESWO)
+  - PB3 is a debug pin (used by the ST-LINK MCU) by default and is not a normal GPIO unless debug is reconfigured.
+- PB13(9)/PB12(9)
+  - These pins have constraints that make implementation less flexible, from the datasheet: "When the pin is used in USB configuration (OTG_HS_ID/OTG_HS_VBUS), the I/O is supplied by VDD33USB, otherwise it is
+supplied by VDD."
+
+
+
 
 
 ### I2C
