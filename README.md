@@ -72,8 +72,16 @@ The turbidity sensor is the only `UART` sensor, it is asynchronous having only T
 
 |        | USART1          | USART2          | USART3                      | UART4                                   | UART5 | USART6         | UART7                 | UART8        |
 |--------|-----------------|-----------------|-----------------------------|------------------------------------------|-------|----------------|-----------------------|--------------|
-| **TX** | PA9 or PB6 or **PB14**     | PA2 or PD5      | PB12 or PC10 or PD8         | PA11 or PB9 or PC10 or PD1 or PH13        | PC12  | PC6 or PG14    | PA15 or PE8 or PF7    | PE1 or PJ8   |
-| **RX** | PA10 or PB7 or **PB15**     | PA3 or PD6      | PB11 or PC11 or PD9         | PA12 or PB8 or PC11 or PD0 or PH14 or PH19| PD2   | PC7 or PG9     | PA8 or PE7 or PF6     | PE0 or PJ9   |
+| **TX** | PA9 or PB6 or **PB14** | PA2 or PD5  | PB12 or PC10 or PD8   | PA11 or PB9 or PC10 or PD1 or PH13        | PC12  | PC6 or PG14    | PA15 or PE8 or PF7    | PE1 or PJ8   |
+| **RX** | PA10 or PB7 or **PB15**  | PA3 or PD6  | PB11 or PC11 or PD9   | PA12 or PB8 or PC11 or PD0 or PH14 or PH19| PD2   | PC7 or PG9     | PA8 or PE7 or PF6     | PE0 or PJ9   |
+
+
+
+|        | USART1          | USART2          | USART3                      | UART4                                   | UART5 | USART6         | UART7                 | UART8        | LPUART |
+|--------|-----------------|-----------------|-----------------------------|------------------------------------------|-------|----------------|-----------------------|--------------|--------------|
+| **TX** |  PB14, PB6 |  PA2, PD5 | PB10, PD8, PC10  | PA12, PH13, PD1, PB9        | PB13(9), PC12, PB6 | PC6, PG10, PG14  |  PF7, PE8, PA15 (JTDI), PB4(NJTRST)   | PJ8, PE1 | PA9, PB6 |
+| **RX** |  PB15, PB7 |  PA3, PD6 | PB11, PD9, PC11  | PA11, PH14, PC11, PD0, PB8  | PB12(9), PD2, PB5  | PC7, PG9   |  PF6, PE7, PA8, PB3(JTDO/TRACESWO)  | PJ9, PE0 | PA10, PB7 |
+
 
 ** Highlighed pins are the default selection in STMCube32IDE**
 
@@ -91,11 +99,6 @@ The H753ZI uses FM+
 | **Fast-mode Plus (FM+)** | **1 MHz** |
 | High-speed mode (Hs)     | 3.4 MHz   |
 
-| Signal        | I2C1 | I2C2 | I2C3 | I2C4 |
-|---------------|------|------|------|------|
-| SCL (Clock)   | PB8  | PF1  | PH7  | PD12 |
-| SDA (Data)    | PB9  | PF0  | PH8  | PD13 |
-
 ### I2C signals
 
 `I2Cx_SCL` - serial clock line
@@ -107,14 +110,11 @@ The H753ZI uses FM+
 Im not sure what we need to deal with the SMBus. So I have only supplied the clock and data pins.
 
 ### I2C pins
-$$
-\begin{array}{l|cccc}
-\textbf{Signal} & \textbf{Sensor 1} & \textbf{Sensor 2} & \textbf{Sensor 3} & \textbf{Sensor 4} \\
-\hline
-\text{I2C SCL (Clock)} &  &  &  &  \\
-\text{I2C SDA (Data)}  &  &  &  & 
-\end{array}
-$$
+
+| Signal        | I2C1 | I2C2 | I2C3 | I2C4 |
+|---------------|------|------|------|------|
+| SCL (Clock)   |  PB6    | PF1, PB10    |  PA8    | PB6, PF14, PD12     |
+| SDA (Data)    |   PB7, PB9  | PF0, PB11     |  PC9    |  PF15, PD13, PB7, PB9    |
 
 
 ### Analog Pins
