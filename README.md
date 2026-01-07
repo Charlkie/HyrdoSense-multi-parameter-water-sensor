@@ -70,12 +70,6 @@ tabulated
 
 The turbidity sensor is the only `UART` sensor, it is asynchronous having only TX/RX pins. Thus we have all 9 UART peripherals at our disposal.
 
-|        | USART1          | USART2          | USART3                      | UART4                                   | UART5 | USART6         | UART7                 | UART8        |
-|--------|-----------------|-----------------|-----------------------------|------------------------------------------|-------|----------------|-----------------------|--------------|
-| **TX** | PA9 or PB6 or **PB14** | PA2 or PD5  | PB12 or PC10 or PD8   | PA11 or PB9 or PC10 or PD1 or PH13        | PC12  | PC6 or PG14    | PA15 or PE8 or PF7    | PE1 or PJ8   |
-| **RX** | PA10 or PB7 or **PB15**  | PA3 or PD6  | PB11 or PC11 or PD9   | PA12 or PB8 or PC11 or PD0 or PH14 or PH19| PD2   | PC7 or PG9     | PA8 or PE7 or PF6     | PE0 or PJ9   |
-
-
 
 |        | USART1          | USART2          | USART3                      | UART4                                   | UART5 | USART6         | UART7                 | UART8        | LPUART |
 |--------|-----------------|-----------------|-----------------------------|------------------------------------------|-------|----------------|-----------------------|--------------|--------------|
