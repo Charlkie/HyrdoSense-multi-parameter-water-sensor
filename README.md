@@ -25,19 +25,19 @@ Package: LQFP144
 ## GPIO Pins:
 
 <p align="center">
-  <img src="image-2.png" width="50%">
+  <img src="image-2.png" width="30%">
 </p>
 
 ### Commuication Peripherals (Digital)
 
 <p align="center">
-  <img src="image.png" width="50%">
+  <img src="image.png" width="30%">
 </p>
 
 ### Analog Peripherals
 
 <p align="center">
-  <img src="image-1.png" width="50%">
+  <img src="image-1.png" width="30%">
 </p>
 
 tabulated
