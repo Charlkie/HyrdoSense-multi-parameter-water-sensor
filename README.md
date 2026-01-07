@@ -40,21 +40,6 @@ Package: LQFP144
   <img src="image-1.png" width="30%">
 </p>
 
-tabulated
-
-| Peripheral type             | How many | Notes                                                                                |
-| --------------------------- | -------- | ------------------------------------------------------------------------------------ |
-| **USART (full)**            | 4        | Full-function USARTs: async, sync, LIN, IrDA, ISO7816 etc. ([STMicroelectronics][1]) |
-| **UART (async only)**       | 4        | Simpler asynchronous UARTs ([STMicroelectronics][1])                                 |
-| **LPUART (low-power UART)** | 1        | Lower-power single UART interface ([STMicroelectronics][1])                          |
-
-[1]: https://www.st.com/en/microcontrollers-microprocessors/stm32h753zi.html?utm_source=chatgpt.com "STM32H753ZI | Product"
-
-
-
-
-
-
 ## Sensors
 
 | **Sensor**                                                                                                                          | **Communication / Output Type** | **MCU Peripheral Required** | **Typical Voltage / Interface** | **Calibration Required**                       |
@@ -67,6 +52,13 @@ tabulated
 ## Pin choices
 
 ### USART
+
+
+| Peripheral type             | How many | 
+| --------------------------- | -------- | 
+| **USART (full)**            | 4        | 
+| **UART (async only)**       | 4        |
+| **LPUART (low-power UART)** | 1        | 
 
 The turbidity sensor is the only `UART` sensor, it is asynchronous having only TX/RX pins. Thus we have all 9 UART peripherals at our disposal.
 
